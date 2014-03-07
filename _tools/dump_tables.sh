@@ -15,6 +15,8 @@ do_dump_wotlk() {
 mkdir -p ${DUMPDIR}
 
 for TABLE in \
+achievement_criteria_requirement \
+achievement_reward \
 areatrigger_involvedrelation \
 areatrigger_tavern \
 areatrigger_teleport \
@@ -30,7 +32,6 @@ creature_ai_summons \
 creature_ai_texts \
 creature_battleground \
 creature_equip_template \
-creature_equip_template_raw \
 creature_involvedrelation \
 creature_linking \
 creature_linking_template \
@@ -49,8 +50,8 @@ db_version \
 dbscripts_on_creature_death \
 dbscripts_on_creature_movement \
 dbscripts_on_event \
-dbscripts_on_go_use \
 dbscripts_on_go_template_use \
+dbscripts_on_go_use \
 dbscripts_on_gossip \
 dbscripts_on_quest_end \
 dbscripts_on_quest_start \
@@ -68,6 +69,7 @@ game_graveyard_zone \
 game_tele \
 game_weather \
 gameobject \
+gameobject_addon \
 gameobject_battleground \
 gameobject_involvedrelation \
 gameobject_loot_template \
@@ -75,11 +77,15 @@ gameobject_questrelation \
 gameobject_template \
 gossip_menu \
 gossip_menu_option \
+instance_encounters \
 instance_template \
+item_convert \
 item_enchantment_template \
+item_expire_convert \
 item_loot_template \
 item_required_target \
 item_template \
+locales_achievement_reward \
 locales_creature \
 locales_gameobject \
 locales_gossip_menu_option \
@@ -91,7 +97,9 @@ locales_quest \
 mail_level_reward \
 mail_loot_template \
 mangos_string \
+milling_loot_template \
 npc_gossip \
+npc_spellclick_spells \
 npc_text \
 npc_trainer \
 npc_trainer_template \
@@ -100,7 +108,6 @@ npc_vendor_template \
 page_text \
 pet_levelstats \
 pet_name_generation \
-petcreateinfo_spell \
 pickpocketing_loot_template \
 player_classlevelstats \
 player_levelstats \
@@ -117,6 +124,8 @@ pool_gameobject_template \
 pool_pool \
 pool_template \
 prospecting_loot_template \
+quest_poi \
+quest_poi_points \
 quest_template \
 reference_loot_template \
 reputation_reward_rate \
@@ -128,12 +137,12 @@ skill_discovery_template \
 skill_extra_item_template \
 skill_fishing_base_level \
 skinning_loot_template \
-spell_affect \
 spell_area \
 spell_bonus_data \
 spell_chain \
 spell_elixir \
 spell_learn_spell \
+spell_loot_template \
 spell_pet_auras \
 spell_proc_event \
 spell_proc_item_enchant \
@@ -142,10 +151,11 @@ spell_target_position \
 spell_template \
 spell_threat \
 transports \
+vehicle_accessory \
 world_template \
 ; do
 
-echo "Dumping ${i}/127 ${TABLE}..."
+echo "Dumping ${i}/138 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2014 MaNGOS <http://getmangos.com/>
