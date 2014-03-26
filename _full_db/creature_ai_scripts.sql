@@ -5657,6 +5657,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (454204,4542,0,0,100,3,30000,30000,30000,30000,11,8399,0,0,0,0,0,0,0,0,0,0,'High Inquisitor Fairbanks - Cast Sleep'),
 (454205,4542,2,0,100,2,30,0,0,0,11,12039,0,1,0,0,0,0,0,0,0,0,'High Inquisitor Fairbanks - Cast Heal at 30% HP'),
 (454206,4542,2,0,100,2,25,0,0,0,11,11647,0,0,0,0,0,0,0,0,0,0,'High Inquisitor Fairbanks - Cast Power Word: Shield at 25% HP'),
+(454207,4542,4,0,100,2,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'High Inquisitor Fairbanks - Set Stand State to Stand on Aggro'),
 (454301,4543,1,0,100,2,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Bloodmage Thalnos - Prevent Combat Movement and Set Phase to 0 on Spawn'),
 (454302,4543,4,0,100,2,0,0,0,0,1,-1202,0,0,0,0,0,0,0,0,0,0,'Bloodmage Thalnos - Yell on Aggro'),
 (454303,4543,4,0,100,2,0,0,0,0,11,9613,1,0,23,1,0,0,0,0,0,0,'Bloodmage Thalnos - Cast Shadow Bolt and Set Phase 1 on Aggro'),
@@ -8838,9 +8839,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (828307,8283,2,0,100,0,15,0,0,0,23,1,0,0,0,0,0,0,0,0,0,0,'Slave Master Blackheart - Set Phase 2 at 15% HP'),
 (828308,8283,2,3,100,0,15,0,0,0,21,1,0,0,25,0,0,0,1,-47,0,0,'Slave Master Blackheart - Start Combat Movement and Flee at 15% HP (Phase 2)'),
 (828309,8283,7,0,100,0,0,0,0,0,22,1,0,0,40,1,0,0,0,0,0,0,'Slave Master Blackheart - Set Phase 1 and Set Melee Weapon Model on Evade'),
-(829601,8296,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Mojo the Twisted - Prevent Combat Movement and Set Phase to 0 on Spawn'),
-(829602,8296,4,0,100,0,0,0,0,0,11,20825,1,0,23,1,0,0,0,0,0,0,'Mojo the Twisted - Cast Shadow Bolt and Set Phase 1 on Aggro');
+(829601,8296,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Mojo the Twisted - Prevent Combat Movement and Set Phase to 0 on Spawn');
 INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(829602,8296,4,0,100,0,0,0,0,0,11,20825,1,0,23,1,0,0,0,0,0,0,'Mojo the Twisted - Cast Shadow Bolt and Set Phase 1 on Aggro'),
 (829603,8296,9,13,100,1,0,40,3400,4800,11,20825,1,0,0,0,0,0,0,0,0,0,'Mojo the Twisted - Cast Shadow Bolt (Phase 1)'),
 (829604,8296,3,13,100,0,7,0,0,0,21,1,0,0,23,1,0,0,0,0,0,0,'Mojo the Twisted - Start Combat Movement and Set Phase 2 when Mana is at 7% (Phase 1)'),
 (829605,8296,9,13,100,0,35,80,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Mojo the Twisted - Start Combat Movement at 35 Yards (Phase 1)'),
@@ -17353,9 +17354,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1954407,19544,9,13,100,0,0,5,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Start Combat Movement Below 5 Yards (Phase 1)'),
 (1954408,19544,3,11,100,1,100,15,100,100,23,-1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Set Phase 1 when Mana is above 15% (Phase 2)'),
 (1954409,19544,9,0,100,1,0,5,19000,25000,11,36109,0,1,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Cast Blink'),
-(1954410,19544,2,0,100,1,50,0,45000,60000,11,36110,0,1,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Summon Dancing Sword at 50% HP'),
-(1954411,19544,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Set Phase to 0 on Evade');
+(1954410,19544,2,0,100,1,50,0,45000,60000,11,36110,0,1,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Summon Dancing Sword at 50% HP');
 INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(1954411,19544,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Set Phase to 0 on Evade'),
 (1954501,19545,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Cohlien Frostweaver - Prevent Combat Movement and Set Phase to 0 on Spawn'),
 (1954502,19545,4,0,100,0,0,0,0,0,11,9672,1,0,23,1,0,0,0,0,0,0,'Cohlien Frostweaver - Cast Frostbolt and Set Phase 1 on Aggro'),
 (1954503,19545,9,13,100,1,0,40,3400,4800,11,9672,1,0,0,0,0,0,0,0,0,0,'Cohlien Frostweaver - Cast Frostbolt (Phase 1)'),
@@ -19172,6 +19173,11 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2239313,22393,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Deathshadow Overlord - Set Phase to 0 on Evade'),
 (2239401,22394,0,0,100,1,8000,8000,6000,12000,11,30639,1,0,0,0,0,0,0,0,0,0,'Deathshadow Hound - Cast Carnivorous Bite'),
 (2248501,22485,4,0,100,0,0,0,0,0,12,9527,1,30000,12,9527,1,30000,1,-549,0,0,'Halu - Summon Enraged Hippogryphs on Aggro'),
+(2250501,22505,11,0,100,0,0,0,0,0,11,39300,0,0,0,0,0,0,0,0,0,0,'The Exorcism Bubbling Slimer Bunny (DND) - Cast Quest - The Exorcism Bubbling Slimer on Spawned'),
+(2250502,22505,1,0,100,0,5000,5000,0,0,12,22506,0,60000,0,0,0,0,0,0,0,0,'The Exorcism Bubbling Slimer Bunny (DND) - Summon Foul Purge on OOC Timer'),
+(2250503,22505,1,0,100,0,7000,7000,0,0,12,22506,0,60000,0,0,0,0,0,0,0,0,'The Exorcism Bubbling Slimer Bunny (DND) - Summon Foul Purge on OOC Timer'),
+(2250701,22507,11,0,100,0,0,0,0,0,11,39303,0,2,0,0,0,0,0,0,0,0,'Darkness Released - Cast Flying Skull (DND) on Spawned'),
+(2250702,22507,6,0,100,0,0,0,0,0,11,39307,0,2,0,0,0,0,0,0,0,0,'Darkness Released - Cast The Exorcism, Flying Skull Despawn on Death'),
 (2280701,22807,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Lost Torranche - Flee at 15% HP'),
 (2281601,22816,6,0,100,0,0,0,0,0,11,39477,1,39,0,0,0,0,0,0,0,0,'Black Cat - Cast Back Luck on Death'),
 (2284401,22844,9,0,100,3,10,40,9000,12000,11,41182,1,0,0,0,0,0,0,0,0,0,'Ashtongue Battlelord - Cast Concussive Throw'),
@@ -19835,6 +19841,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2395608,23956,0,0,100,5,4500,5000,11000,16000,11,60227,4,1,0,0,0,0,0,0,0,0,'Dragonflayer Strategist (Heroic) - Cast Ticking Time Bomb'),
 (2395609,23956,0,0,100,7,7500,9000,13000,15000,11,42972,4,1,0,0,0,0,0,0,0,0,'Dragonflayer Strategist - Cast Blind'),
 (2395610,23956,7,0,100,6,0,0,0,0,22,1,0,0,40,1,0,0,0,0,0,0,'Dragonflayer Strategist - Set Phase 1 and Set Melee Weapon Model on Evade'),
+(2395901,23959,0,0,100,1,1000,3000,10000,20000,11,49980,1,0,0,0,0,0,0,0,0,0,'Darkclaw Bat - Cast Ravenous Pathogen'),
+(2395902,23959,0,0,100,1,5000,8000,8000,14000,11,32651,0,0,0,0,0,0,0,0,0,0,'Darkclaw Bat - Cast Howling Screech'),
 (2396001,23960,0,0,100,3,6000,6000,9500,15000,11,54965,0,1,0,0,0,0,0,0,0,0,'Dragonflayer Ironhelm (Normal) - Cast Bolthorn\'s Rune of Flame'),
 (2396002,23960,0,0,100,5,6000,6000,9500,15000,11,59617,0,1,0,0,0,0,0,0,0,0,'Dragonflayer Ironhelm (Heroic) - Cast Bolthorn\'s Rune of Flame'),
 (2396003,23960,16,0,100,3,42740,100,17000,25000,11,42740,6,32,0,0,0,0,0,0,0,0,'Dragonflayer Ironhelm - (Normal) - Cast Njord\'s Rune of Protection'),
@@ -25643,7 +25651,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (3444103,34441,9,5,100,31,0,30,8000,8000,11,65492,1,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Blast (Phase 1)'),
 (3444104,34441,0,5,100,31,7000,11000,9000,12000,11,65488,4,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Flay (Phase 1)'),
 (3444105,34441,0,5,100,31,12000,15000,11000,14000,11,65541,4,33,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Shadow Word: Pain (Phase 1)'),
-(3444106,34441,0,5,100,31,15000,21000,16000,19000,11,65490,5,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Vampiric Touch (Phase 1)'),
+(3444106,34441,0,5,100,31,15000,21000,16000,19000,11,65490,5,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Vampiric Touch (Phase 1)');
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (3444107,34441,0,5,100,31,12000,19000,120000,135000,11,65545,2,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Psychic Horror (Phase 1)'),
 (3444108,34441,0,5,100,31,11000,16000,14000,19000,11,65546,4,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Dispel Magic (Phase 1)'),
 (3444109,34441,0,5,100,31,17000,23000,14000,19000,11,65546,0,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Dispel Magic (Phase 1)'),
@@ -25651,8 +25660,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (3444111,34441,9,5,100,30,25,80,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Start Combat Movement at 25 Yards (Phase 1)'),
 (3444112,34441,9,5,100,30,5,15,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Prevent Combat Movement at 15 Yards (Phase 1)'),
 (3444113,34441,9,5,100,30,0,5,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Start Combat Movement Below 5 Yards'),
-(3444114,34441,3,3,100,31,100,15,100,100,23,-1,0,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Set Phase 1 when Mana is above 15% (Phase 2)');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(3444114,34441,3,3,100,31,100,15,100,100,23,-1,0,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Set Phase 1 when Mana is above 15% (Phase 2)'),
 (3444115,34441,0,0,100,31,25000,45000,180000,205000,11,65544,0,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Dispersion'),
 (3444116,34441,8,0,100,31,0,1,30000,30000,11,65547,0,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast PvP Trinket on Normal Spellhit'),
 (3444117,34441,13,0,100,31,45000,45000,0,0,11,65542,1,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Silence on Target Spell Casting'),
