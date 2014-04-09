@@ -27,7 +27,6 @@ command \
 conditions \
 creature \
 creature_addon \
-creature_template_classlevelstats \
 creature_ai_scripts \
 creature_ai_summons \
 creature_ai_texts \
@@ -45,6 +44,7 @@ creature_onkill_reputation \
 creature_questrelation \
 creature_template \
 creature_template_addon \
+creature_template_classlevelstats \
 creature_template_spells \
 db_script_string \
 db_version \
