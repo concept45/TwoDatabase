@@ -156,7 +156,7 @@ vehicle_accessory \
 world_template \
 ; do
 
-echo "Dumping ${i}/138 ${TABLE}..."
+echo "Dumping ${i}/139 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2014 MaNGOS <http://getmangos.com/>
