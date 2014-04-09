@@ -27,6 +27,7 @@ command \
 conditions \
 creature \
 creature_addon \
+creature_template_classlevelstats \
 creature_ai_scripts \
 creature_ai_summons \
 creature_ai_texts \
