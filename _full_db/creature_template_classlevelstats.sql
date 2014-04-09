@@ -28,29 +28,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `db_version`
+-- Table structure for table `creature_template_classlevelstats`
 --
 
-DROP TABLE IF EXISTS `db_version`;
+DROP TABLE IF EXISTS `creature_template_classlevelstats`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `db_version` (
-  `version` varchar(120) DEFAULT NULL,
-  `creature_ai_version` varchar(120) DEFAULT NULL,
-  `cache_id` int(10) DEFAULT '0',
-  `required_12615_01_mangos_creature_template_classlevelstats` bit(1) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Used DB version notes';
+CREATE TABLE `creature_template_classlevelstats` (
+  `Level` tinyint(4) NOT NULL,
+  `Class` tinyint(4) NOT NULL,
+  `BaseHealthExp0` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `BaseHealthExp1` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `BaseHealthExp2` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `BaseMana` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `BaseDamageExp0` float NOT NULL DEFAULT '0',
+  `BaseDamageExp1` float NOT NULL DEFAULT '0',
+  `BaseDamageExp2` float NOT NULL DEFAULT '0',
+  `BaseMeleeAttackPower` float NOT NULL DEFAULT '0',
+  `BaseRangedAttackPower` float NOT NULL DEFAULT '0',
+  `BaseArmor` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Level`,`Class`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `db_version`
+-- Dumping data for table `creature_template_classlevelstats`
 --
 
-LOCK TABLES `db_version` WRITE;
-/*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
-INSERT INTO `db_version` (`version`, `creature_ai_version`, `cache_id`, `required_12615_01_mangos_creature_template_classlevelstats`) VALUES
-('TwoDatabase 1.0.0 for MaNGOSTwo 12600+ and ScriptDevTwo 2984+','MaNGOSTwo Artificial Creature Intelligence Database',406,NULL);
-/*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
+LOCK TABLES `creature_template_classlevelstats` WRITE;
+/*!40000 ALTER TABLE `creature_template_classlevelstats` DISABLE KEYS */;
+/*!40000 ALTER TABLE `creature_template_classlevelstats` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

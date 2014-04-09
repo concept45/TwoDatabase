@@ -28,6 +28,7 @@ ALTER TABLE `command` ORDER BY `name` ASC;
 ALTER TABLE `conditions` ORDER BY `condition_entry` ASC;
 ALTER TABLE `creature` ORDER BY `guid` ASC;
 ALTER TABLE `creature_addon` ORDER BY `guid` ASC;
+ALTER TABLE `creature_template_classlevelstats` ORDER BY `Level` ASC;
 ALTER TABLE `creature_ai_scripts` ORDER BY `id` ASC, `event_type`;
 ALTER TABLE `creature_ai_summons` ORDER BY `id` ASC;
 ALTER TABLE `creature_ai_texts` ORDER BY `entry` ASC;
