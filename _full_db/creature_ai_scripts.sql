@@ -8915,6 +8915,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (839001,8390,4,0,100,0,0,0,0,0,12,7980,1,300000,0,0,0,0,0,0,0,0,'Chemist Cuely - Summon Deathguard Elite on Aggro'),
 (840001,8400,9,0,100,1,0,5,15000,21000,11,10101,1,0,0,0,0,0,0,0,0,0,'Obsidion - Cast Knock Away'),
 (840002,8400,0,0,100,1,7000,11000,12000,16000,11,12734,0,0,0,0,0,0,0,0,0,0,'Obsidion - Cast Knock Away'),
+(840003,8400,4,0,100,0,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Obsidion - Set Stand State to Stand on Aggro'),
 (840301,8403,4,0,100,0,0,0,0,0,12,7980,1,300000,0,0,0,0,0,0,0,0,'Jeremiah Payson - Summon Deathguard Elite on Aggro'),
 (840801,8408,9,0,100,1,0,5,5000,9000,11,11976,1,0,0,0,0,0,0,0,0,0,'Warlord Krellian - Cast Strike'),
 (840802,8408,0,0,100,1,4000,8000,12000,17000,11,10968,0,1,0,0,0,0,0,0,0,0,'Warlord Krellian - Cast Demoralizing Roar'),
@@ -15902,6 +15903,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1813701,18137,0,0,100,1,100,100,12000,12000,11,35234,1,0,0,0,0,0,0,0,0,0,'Marsh Dredger - Cast Strangling Roots'),
 (1814601,18146,4,0,100,0,0,0,0,0,12,16222,1,300000,0,0,0,0,0,0,0,0,'Champion Vranesh - Summon Silvermoon City Guardian on Aggro'),
 (1814701,18147,9,0,100,1,0,60,7000,12000,11,29120,1,0,0,0,0,0,0,0,0,0,'Silvermoon Ranger - Cast Shoot Bow'),
+(1815401,18154,4,0,100,0,0,0,0,0,11,17741,0,0,0,0,0,0,0,0,0,0,'Ssslith - Cast Mana Shield on Aggro'),
+(1815402,18154,0,0,100,1,3000,5000,8000,18000,11,12674,0,0,0,0,0,0,0,0,0,0,'Ssslith - Cast Frost Nova'),
+(1815403,18154,0,0,100,1,60000,70000,60000,70000,11,17741,0,0,0,0,0,0,0,0,0,0,'Ssslith - Cast Mana Shield'),
 (1815501,18155,9,0,100,7,8,25,10000,10000,11,32323,1,0,0,0,0,0,0,0,0,0,'Bloodfalcon - Cast Charge'),
 (1815502,18155,0,0,100,7,6200,13300,10800,19300,11,34856,1,0,0,0,0,0,0,0,0,0,'Bloodfalcon - Cast Bloodburn'),
 (1815503,18155,0,0,100,7,12500,25300,25300,44200,11,18144,1,0,0,0,0,0,0,0,0,0,'Bloodfalcon - Cast Swoop'),
@@ -17350,12 +17354,12 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1954403,19544,9,13,100,1,0,40,3400,4800,11,9532,1,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Cast Lightning Bolt (Phase 1)'),
 (1954404,19544,3,13,100,0,7,0,0,0,21,1,0,0,23,1,0,0,0,0,0,0,'Conjurer Luminrath - Start Combat Movement and Set Phase 2 when Mana is at 7% (Phase 1)'),
 (1954405,19544,9,13,100,0,35,80,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Start Combat Movement at 35 Yards (Phase 1)'),
-(1954406,19544,9,13,100,0,5,15,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Prevent Combat Movement at 15 Yards (Phase 1)'),
+(1954406,19544,9,13,100,0,5,15,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Prevent Combat Movement at 15 Yards (Phase 1)');
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (1954407,19544,9,13,100,0,0,5,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Start Combat Movement Below 5 Yards (Phase 1)'),
 (1954408,19544,3,11,100,1,100,15,100,100,23,-1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Set Phase 1 when Mana is above 15% (Phase 2)'),
 (1954409,19544,9,0,100,1,0,5,19000,25000,11,36109,0,1,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Cast Blink'),
-(1954410,19544,2,0,100,1,50,0,45000,60000,11,36110,0,1,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Summon Dancing Sword at 50% HP');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(1954410,19544,2,0,100,1,50,0,45000,60000,11,36110,0,1,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Summon Dancing Sword at 50% HP'),
 (1954411,19544,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Set Phase to 0 on Evade'),
 (1954501,19545,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Cohlien Frostweaver - Prevent Combat Movement and Set Phase to 0 on Spawn'),
 (1954502,19545,4,0,100,0,0,0,0,0,11,9672,1,0,23,1,0,0,0,0,0,0,'Cohlien Frostweaver - Cast Frostbolt and Set Phase 1 on Aggro'),
@@ -25647,12 +25651,12 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (3428804,34288,11,0,100,4,0,0,0,0,11,65103,0,2,0,0,0,0,0,0,0,0,'Salvagebot Sawblade (Heroic) - Cast Sawblades on Spawned'),
 (3438301,34383,22,0,100,1,34,0,0,0,11,65386,6,0,0,0,0,0,0,0,0,0,'Catrina - Cast Honor the Dead on Receive Dance Emote'),
 (3444101,34441,1,0,100,30,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Prevent Combat Movement and Set Phase to 0 on Spawn'),
-(3444102,34441,4,0,100,30,0,0,0,0,11,65492,1,0,23,1,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Blast and Set Phase 1 on Aggro'),
+(3444102,34441,4,0,100,30,0,0,0,0,11,65492,1,0,23,1,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Blast and Set Phase 1 on Aggro');
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (3444103,34441,9,5,100,31,0,30,8000,8000,11,65492,1,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Blast (Phase 1)'),
 (3444104,34441,0,5,100,31,7000,11000,9000,12000,11,65488,4,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Flay (Phase 1)'),
 (3444105,34441,0,5,100,31,12000,15000,11000,14000,11,65541,4,33,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Shadow Word: Pain (Phase 1)'),
-(3444106,34441,0,5,100,31,15000,21000,16000,19000,11,65490,5,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Vampiric Touch (Phase 1)');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(3444106,34441,0,5,100,31,15000,21000,16000,19000,11,65490,5,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Vampiric Touch (Phase 1)'),
 (3444107,34441,0,5,100,31,12000,19000,120000,135000,11,65545,2,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Psychic Horror (Phase 1)'),
 (3444108,34441,0,5,100,31,11000,16000,14000,19000,11,65546,4,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Dispel Magic (Phase 1)'),
 (3444109,34441,0,5,100,31,17000,23000,14000,19000,11,65546,0,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Dispel Magic (Phase 1)'),
