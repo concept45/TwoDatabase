@@ -8931,6 +8931,17 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (840910,8409,9,0,100,1,0,8,13000,16000,11,11831,0,1,0,0,0,0,0,0,0,0,'Caravan Master Tset - Cast Frost Nova'),
 (840911,8409,27,0,100,1,12544,1,15000,30000,11,12544,0,1,0,0,0,0,0,0,0,0,'Caravan Master Tset - Cast Frost Armor on Missing Buff'),
 (840912,8409,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Caravan Master Tset - Set Phase to 0 on Evade'),
+(842101,8421,1,0,100,0,1000,1000,0,0,1,-344,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC timer'),
+(842102,8421,1,0,100,0,5000,5000,0,0,1,-642,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC timer'),
+(842103,8421,1,0,100,0,8000,8000,0,0,1,-643,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC timer'),
+(842104,8421,1,0,100,0,13000,13000,0,0,1,-644,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC timer'),
+(842105,8421,1,0,100,0,18000,18000,0,0,1,-645,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC timer'),
+(842106,8421,1,0,100,0,22000,22000,0,0,1,-646,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC timer'),
+(842107,8421,1,0,100,0,23000,23000,0,0,36,8391,0,0,0,0,0,0,0,0,0,0,'Dorius - update entry to Lathoric the Black on OOC timer'),
+(842108,8421,1,0,100,0,24000,24000,0,0,1,-647,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC Timer'),
+(842109,8421,1,0,100,0,28000,28000,0,0,1,-673,0,0,0,0,0,0,0,0,0,0,'Dorius - Say text on OOC Timer'),
+(842110,8421,1,0,100,0,28000,28000,0,0,19,256,0,0,0,0,0,0,0,0,0,0,'Dorius - Remove unit flag OOC Not Attackable on OOC Timer'),
+(842111,8421,7,0,100,0,0,0,0,0,41,1000,0,0,0,0,0,0,0,0,0,0,'Dorius - Despawn on Evade'),
 (843801,8438,11,0,100,2,0,0,0,0,11,7741,0,0,0,0,0,0,0,0,0,0,'Hakkari Bloodkeeper - Summoned Demon on Spawn'),
 (843802,8438,9,0,100,3,0,40,5000,8000,11,12471,1,1,0,0,0,0,0,0,0,0,'Hakkari Bloodkeeper - Cast Shadow Bolt'),
 (843803,8438,0,0,100,3,13000,17000,14000,20000,11,11671,4,33,0,0,0,0,0,0,0,0,'Hakkari Bloodkeeper - Cast Corruption'),
@@ -17346,7 +17357,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1952903,19529,0,0,100,1,7000,9000,5000,7000,11,15284,1,0,0,0,0,0,0,0,0,0,'Stormspire Nexus-Guard - Cast Cleave'),
 (1953401,19534,1,0,100,1,120000,120000,180000,240000,1,-337,0,0,0,0,0,0,0,0,0,0,'Dealer Digriz - Say OOC'),
 (1953501,19535,1,0,100,1,60000,60000,180000,240000,1,-338,0,0,0,0,0,0,0,0,0,0,'Dealer Zijaad - Say OOC'),
-(1954101,19541,1,0,80,33,60000,60000,200000,230000,1,-318,-319,-1130,1,-1131,-1132,0,0,0,0,0,'Netherstorm Agent - Random Say OOC'),
+(1954101,19541,1,0,80,33,60000,60000,200000,230000,1,-318,-319,-1130,1,-1131,-1132,0,0,0,0,0,'Netherstorm Agent - Random Say OOC');
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (1954301,19543,9,0,100,1,0,5,12000,16000,11,36104,0,0,0,0,0,0,0,0,0,0,'Battle-Mage Dathric - Cast Torrent of Flames'),
 (1954302,19543,0,0,100,1,9000,13000,19000,24000,11,17273,4,1,0,0,0,0,0,0,0,0,'Battle-Mage Dathric - Cast Pyroblast'),
 (1954401,19544,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Conjurer Luminrath - Prevent Combat Movement and Set Phase to 0 on Spawn'),
@@ -17354,8 +17366,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1954403,19544,9,13,100,1,0,40,3400,4800,11,9532,1,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Cast Lightning Bolt (Phase 1)'),
 (1954404,19544,3,13,100,0,7,0,0,0,21,1,0,0,23,1,0,0,0,0,0,0,'Conjurer Luminrath - Start Combat Movement and Set Phase 2 when Mana is at 7% (Phase 1)'),
 (1954405,19544,9,13,100,0,35,80,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Start Combat Movement at 35 Yards (Phase 1)'),
-(1954406,19544,9,13,100,0,5,15,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Prevent Combat Movement at 15 Yards (Phase 1)');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(1954406,19544,9,13,100,0,5,15,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Prevent Combat Movement at 15 Yards (Phase 1)'),
 (1954407,19544,9,13,100,0,0,5,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Start Combat Movement Below 5 Yards (Phase 1)'),
 (1954408,19544,3,11,100,1,100,15,100,100,23,-1,0,0,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Set Phase 1 when Mana is above 15% (Phase 2)'),
 (1954409,19544,9,0,100,1,0,5,19000,25000,11,36109,0,1,0,0,0,0,0,0,0,0,'Conjurer Luminrath - Cast Blink'),
@@ -25644,15 +25655,15 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (3427301,34273,0,0,100,3,5000,8000,10000,15000,11,65080,4,0,0,0,0,0,0,0,0,0,'XB-488 Disposalbot (Normal) - Cast Cut Scrap Metal'),
 (3427302,34273,0,0,100,5,5000,8000,10000,15000,11,65104,4,0,0,0,0,0,0,0,0,0,'XB-488 Disposalbot (Heroic) - Cast Cut Scrap Metal'),
 (3427303,34273,2,0,100,6,10,0,0,0,11,65084,0,0,0,0,0,0,0,0,0,0,'XB-488 Disposalbot - Cast Self Destruct at 10% HP'),
-(3427501,34275,0,0,100,7,1000,2000,3000,4000,11,65062,1,0,0,0,0,0,0,0,0,0,'Ward of Life - Cast Lash'),
+(3427501,34275,0,0,100,7,1000,2000,3000,4000,11,65062,1,0,0,0,0,0,0,0,0,0,'Ward of Life - Cast Lash');
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (3428801,34288,11,0,100,6,0,0,0,0,11,65087,0,2,20,0,0,0,21,0,0,0,'Salvagebot Sawblade - Cast Salvage Saws Visual and Set Auto Attack and Combat Movement to False on Spawn'),
 (3428802,34288,11,0,100,6,0,0,0,0,11,61906,0,2,0,0,0,0,0,0,0,0,'Salvagebot Sawblade - Cast Random Aggro Periodic (5 sec) on Spawned'),
 (3428803,34288,11,0,100,2,0,0,0,0,11,65090,0,2,0,0,0,0,0,0,0,0,'Salvagebot Sawblade (Normal) - Cast Sawblades on Spawned'),
 (3428804,34288,11,0,100,4,0,0,0,0,11,65103,0,2,0,0,0,0,0,0,0,0,'Salvagebot Sawblade (Heroic) - Cast Sawblades on Spawned'),
 (3438301,34383,22,0,100,1,34,0,0,0,11,65386,6,0,0,0,0,0,0,0,0,0,'Catrina - Cast Honor the Dead on Receive Dance Emote'),
 (3444101,34441,1,0,100,30,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Prevent Combat Movement and Set Phase to 0 on Spawn'),
-(3444102,34441,4,0,100,30,0,0,0,0,11,65492,1,0,23,1,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Blast and Set Phase 1 on Aggro');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(3444102,34441,4,0,100,30,0,0,0,0,11,65492,1,0,23,1,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Blast and Set Phase 1 on Aggro'),
 (3444103,34441,9,5,100,31,0,30,8000,8000,11,65492,1,0,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Blast (Phase 1)'),
 (3444104,34441,0,5,100,31,7000,11000,9000,12000,11,65488,4,1,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Mind Flay (Phase 1)'),
 (3444105,34441,0,5,100,31,12000,15000,11000,14000,11,65541,4,33,0,0,0,0,0,0,0,0,'Vivienne Blackwhisper - Cast Shadow Word: Pain (Phase 1)'),
