@@ -83,6 +83,7 @@ INSERT INTO `scripted_areatrigger` (`entry`, `ScriptName`) VALUES
 (4033,'at_stomach_cthun'),
 (4034,'at_stomach_cthun'),
 (4047,'at_temple_ahnqiraj'),
+(4052,'at_temple_ahnqiraj'),
 (4112,'at_naxxramas'),
 (4113,'at_naxxramas'),
 (4288,'at_dark_portal'),
@@ -114,6 +115,12 @@ INSERT INTO `scripted_areatrigger` (`entry`, `ScriptName`) VALUES
 (5581,'at_pit_of_saron'),
 (5604,'at_icecrown_citadel'),
 (5709,'at_icecrown_citadel'),
+(5710,'at_hot_on_the_trail'),
+(5711,'at_hot_on_the_trail'),
+(5712,'at_hot_on_the_trail'),
+(5714,'at_hot_on_the_trail'),
+(5715,'at_hot_on_the_trail'),
+(5716,'at_hot_on_the_trail'),
 (5732,'at_icecrown_citadel');
 /*!40000 ALTER TABLE `scripted_areatrigger` ENABLE KEYS */;
 UNLOCK TABLES;
